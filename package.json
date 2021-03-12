@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev-up-server-http": "ts-node src/http/server.ts"
   }
 }
