@@ -1,10 +1,14 @@
-import express from 'express'
+import express, { Express } from 'express'
 import setupMiddlewares from './middlewares'
+import { RoutesApp } from '../routes/loader'
 
 
-let server = express()
+const routes = new RoutesApp()
+
+
+let server: Express = express()
 setupMiddlewares(server)
-
+server = routes.routesLoader(server)
 
 export const appHttp = {
     server
